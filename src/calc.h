@@ -1,6 +1,10 @@
 #ifndef _calc_h
 #define _calc_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 enum read_mode {
 		normal, paren
 };
@@ -23,4 +27,8 @@ float addition(node_t **stack1, node_t **stack2);
 float subtraction(node_t **stack1, node_t **stack2);
 float multiplication(node_t **stack1, node_t **stack2);
 float division(node_t **stack1, node_t **stack2);
+#ifdef __cplusplus
+}
 #endif
+#endif
+

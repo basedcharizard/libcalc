@@ -7,6 +7,7 @@ OBJECTS=$(patsubst %.c, %.o, $(SOURCES))
 all: $(TARGET) 
 
 $(TARGET): src/calc.o
+	@mkdir -p build
 	ar -cvq $(TARGET) src/calc.o
 
 test: $(OBJECTS)
